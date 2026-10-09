@@ -8,12 +8,9 @@ class UserModel extends Model
 {
     protected $table            = 'users';
     protected $primaryKey       = 'id';
-    protected $allowedFields    = ['username', 'full_name', 'email', 'created_at'];
+    protected $allowedFields    = ['username', 'full_name', 'email', 'password', 'created_at'];
     protected $useTimestamps    = false;
 
-    /**
-     * Fetch the single demo user record
-     */
     public function getDemoUser()
     {
         return $this->first();
